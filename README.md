@@ -17,4 +17,5 @@ prerequisites
 install pip before installing prerequesties
 
 Step 1: run the CNN_M8_goodone.ipynb file inside the SER_TRAINING folder - it is the code for training SER ml model
+
 Step 2: run the manage.py file inside the SER_WEBPAGE directory. - it opens the web
