@@ -3,7 +3,6 @@ Emotions play a fundamental role in human communication, influencing how we expr
 
 This project demonstrates the integration of a SPEECH EMOTION RECOGNITION using CNN and librosa library. The website allows users upload a audio file or record lively and displays emotion detected.
 
-Table of Contents • Getting Started • Prerequisites • Installation • Project Structure • Usage • Running the Django web • Accessing the Website • Emotion Recognition 
 
 prerequisites
 1.python
@@ -15,4 +14,7 @@ prerequisites
 7.pickle
 8.django
 
-install pip
+install pip before installing prerequesties
+
+Step 1: run the CNN_M8_goodone.ipynb file inside the SER_TRAINING folder - it is the code for training SER ml model
+Step 2: run the manage.py file inside the SER_WEBPAGE directory. - it opens the web
