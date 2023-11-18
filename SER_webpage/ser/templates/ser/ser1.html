@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Emotion</title>
+   
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'ser/hi.css' %}">
+    <style>
+        body {
+            background-image: url("{% static 'ser/bk.jpg' %}");
+            background-size: cover;
+            background-color: #000;
+        }
+        h1 {
+            color: #3ac6f4;
+          }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+
+          }
+      </style>
+      
+</head>
+
+<body>
+ <center>
+       
+ <div class="wrapper">
+    <form action="{% url 'to_rec' %}" method="post">
+        {% csrf_token %}
+        <button class="custom-btn btn-3"><span>RECORD</span></button>
+    </form>
+    <br>
+    <br>
+    <form action="{% url 'to_upload' %}" method="post">
+        {% csrf_token %}
+        <button class="custom-btn btn-7"><span>UPLOAD</span></button>
+    </form> 
+   
+</div>
+ </center>
+ {% load static %}
+</body id = "bg" style = "background-image : {% static 'ser/jpi.jpg' %}">  
+</html>

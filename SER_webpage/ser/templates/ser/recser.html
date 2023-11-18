@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Record audio</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'ser/hi.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+          background-image: url("{% static 'ser/bk.jpg' %}");
+          background-size: cover;
+          background-color: #000;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100vw;
+          height: 100vh;
+      }
+      h1 {
+        colour: rgba(2,126,251,1);
+      }
+    </style>
+</head>
+<body>
+<div>
+      <div class="wrapper">
+        
+        <form action = "{% url 'rec1' %} " method="post" >
+            {% csrf_token %}
+
+      
+              <button class="custom-btn btn-3" id="btn"><span>RECORD</span></button>
+                <audio controls>
+                    {% load static %}
+                    <source src="{% static bb %}" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+                <h1 id = "hi"> {{hi1}}  {{mk}} {{hi}} </h1>
+            
+            </form> 
+      </div> 
+        
+</div>
+
+
+
+
+<script>
+  let btn = document.getElementById('btn')
+
+
+btn.addEventListener('click',()=>{
+  btn.style.display='none'
+})
+</script>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<form action = "{% url 'login' %} " method="post" >
+
+  {% csrf_token %}
+  <button class="custom-btn btn-3" id="btn"><span>HOME</span></button>
+</form>
+
+
+</body>
+</html>

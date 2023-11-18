@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload</title>
+  
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'ser/hi.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-image: url("{% static 'ser/bk.jpg' %}");
+            background-size: cover;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+        }
+        h1 {
+            color: rgba(251,75,2,1);
+          }
+      </style>
+</head>
+<body>
+<div id="speechContainer">
+    
+
+    <div id="speechContainer">
+            
+        <h1  id = "hi">Upload new File</h1>
+        <br>
+            <form action = "{% url 'abs' %} " method="post" >
+
+                {% csrf_token %}
+                <button class="custom-btn btn-7"><span>UPLOAD</span></button>
+                
+            </form>
+            
+            <div id="speechTranscriptContainer">
+            <h1 id ="hi"> {{u}}  {{va}} </h1>
+                
+    </div> 
+    </div>
+      <br>  <form action = "{% url 'login' %} " method="post" >
+
+        {% csrf_token %}
+        <button class="custom-btn btn-7"><span>Home</span></button>
+        
+    </form>
+</body>
+</html>
